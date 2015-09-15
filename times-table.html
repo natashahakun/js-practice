@@ -2,21 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Chapter 3</title>
+  <title>Chapter 4 and Chapter 5</title>
 </head>
 
 <body>
   <script>
-    var timesTable;
+    var twelveTimesTable;
     var timesBy = 12;
 
-    for (timesTable = 1; timesTable < 13; timesTable++) {
-      var result = timesTable * timesBy;
-      if (timesTable < 12) {
+    for (twelveTimesTable = 1; twelveTimesTable < 13; twelveTimesTable++) {
+      var result = twelveTimesTable * timesBy;
+      if (twelveTimesTable < 12) {
         result += ", "
+      }
+      else if (twelveTimesTable == 12) {
+        result += "<br /> <br />"
       }
       document.write(result);
     }
+
+
+
+    function fourTimesTable(multiplier, start, end) {
+      for (; start <= end; start++) {
+             document.write(multiplier + " * " + start + " = " + start * multiplier + "<br />");
+          }
+      }
+
+      fourTimesTable(4,4,9);
 
   </script>
 </body>

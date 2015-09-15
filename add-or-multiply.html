@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Exercises</title>
+</head>
+
+<body>
+  <script>
+    var num = prompt("Please choose a number");
+    var n = parseFloat(num);
+    while (isNaN(n)) {
+      n = prompt("Please enter a valid number");
+    }
+    var operation = prompt("Would you like to add or multiply?");
+    var finalSum = 0;
+    var finalProduct = 1;
+
+
+    function program(n, operation) {
+      var answer;
+      for (i = 1; i <= n; i++) {
+        if (operation === "add") {
+          finalSum += i;
+          answer = finalSum;
+        } else if (operation === "multiply") {
+          finalProduct *= i;
+          answer = finalProduct;
+        } else {
+          prompt("Please select add or multiply");
+        }
+      }
+      document.write(answer);
+    };
+
+ program(n, operation);
+
+</script>
+</body>
+</html>
